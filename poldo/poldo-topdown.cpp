@@ -8,7 +8,6 @@ int W[MAXN];
 int N;
 
 // Programmazione dinamica top down - metodo ricorsivo
-// Servono long long perchè il numero di combinazioni potrebbe non stare dentro un int
 int f(int n){
     if(dp[n] != -1) return dp[n];
     int ans = 0;
@@ -30,7 +29,7 @@ int main(){
         dp[n] = -1;
 
    // Computo la risposta
-   int ans = 0;
+   int ans = 1; // Poldo può sempre mangiare almeno un panino
    for(int i = 0; i < N; ++i)
         ans = max(ans, f(i)+1);
    cout << "Answer: " << ans << endl;    
