@@ -21,7 +21,7 @@ int main(){
     }
 
    // Computo la risposta
-   int ans = 0;
+   int ans = 1; // Almeno un panino sarà mangiato da Poldo
    for(int i = 0; i < N; ++i)
         ans = max(ans, dp[i]+1);
    cout << "Answer: " << ans << endl;    
